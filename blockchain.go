@@ -40,18 +40,6 @@ const genesisBlockHeight = 0
 
 var blockchainSubdirectory string
 
-/*
- * Block metadata fields:
- *
- * PreviousBlockHash|1000000000000000000000000000000000000000000000000000000000000001
- * Creator|ivoras@gmail.com
- * PreviousBlockHashSignature|3046022100db037ae6cb3c6e37cbc8ec592ba7eed2e6d18e6a3caedc4e2e81581eb97acb67022100d46d8ed27b5d78a8509b1eb8549c9b6b8f1c0a134c0c7af23bb93ab8cc842e2d
- * CreatorPublicKey|1:a3c07ef6cbee246f231a61ff36bbcd8e8563723e3703eb345ecdd933d7709ae2
- * Version|1
- *
- * Of these, only the Creator field is optional. By default, for new blocks, it is taken
- * from the "BlockCreator" field in the pubkey metadata (if it exists).
- */
 
 // Block is the working representation of a blockchain block
 type Block struct {

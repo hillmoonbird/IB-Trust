@@ -31,7 +31,6 @@ func blockWebSendBlock(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/x-sqlite3")
 	w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=\"%08x.db\"", blockHeight))
 	http.ServeFile(w, r, blockFilename)
-	// log.Println("Done serving block", blockHeight)
 }
 
 func blockWebSendChainParams(w http.ResponseWriter, r *http.Request) {
